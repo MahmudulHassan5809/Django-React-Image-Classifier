@@ -10,3 +10,10 @@ class Image(models.Model):
 
     def __str__(self):
         return self.classified
+
+    def save(self, *args, **kwargs):
+        try:
+            print("Success")
+        except Exception as e:
+            print("Classfication failed")
+        super().save(*args, **kwargs)
