@@ -8,3 +8,38 @@ import {
     GET_ARTICLE_BY_ID,
     GET_ERRORS
 } from './types.js';
+
+// GET ALL Images
+export const getImages = () => (dispatch) => {
+    axios.get(`/api/images/`)
+        .then(res => {
+            dispatch({
+                type: GET_IMAGES,
+                payload : {
+                    images : res.data,
+                }
+            })
+        })
+        .catch(err => {
+            console.log(err.response.data)
+            dispatch(returnErrors(err.response.data,err.response.status))
+        });
+}
+
+// ADD  Image
+export const addImage = (data) => (dispatch) => {
+
+    axios.post('/api/image/create/',data,{
+        headers: {
+            'content-type': 'multipart/form-data'
+        }
+    })
+    .then(res => {
+        dispatch(createMessage({imageAdded: 'Image Uploaded'}));
+        dispatch({
+            type: ADD_IMAGE,
+            payload : res.data
+        })
+    })
+    .catch(err => dispatch(returnErrors(err.response.data,err.response.status)));
+}

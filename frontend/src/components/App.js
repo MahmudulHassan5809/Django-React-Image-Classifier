@@ -8,6 +8,7 @@ import AlertTemplate from 'react-alert-template-basic';
 import Header from './layout/Header';
 import Alerts from './layout/Alerts';
 import Home from './images/Home';
+import Images from './images/Images';
 
 import { Provider } from 'react-redux';
 import store from '../store';
@@ -34,6 +35,7 @@ const App = () => {
                     <div className="container">
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route exact path="/images" component={Images} />
                         </Switch>
                     </div>
 
