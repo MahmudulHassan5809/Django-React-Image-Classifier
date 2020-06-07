@@ -1,4 +1,5 @@
 import {
+    ADD_IMAGE,
     GET_IMAGES,
     DELETE_IMAGE,
     GET_IMAGE_BY_ID,
@@ -15,6 +16,12 @@ export default function(state = initialState,action){
             return{
                 ...state,
                 images: action.payload.images,
+            }
+            break;
+        case GET_IMAGE_BY_ID:
+            return{
+                ...state,
+                image: action.payload,
             }
             break;
         default:

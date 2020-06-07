@@ -11,11 +11,15 @@ const Alerts = ({errors,alert,messages}) => {
             if(errors.msg.title){
                 alert.error(`picture : ${errors.msg.picture.join()}`);
             }
+            else{
+                alert.error("SOme Ting Went Wrong");
+            }
         }
 
         if(messages.imageAdded){
             alert.success(messages.imageAdded);
         }
+
     },[errors,messages])
 
     return (

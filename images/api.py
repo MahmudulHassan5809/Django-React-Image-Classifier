@@ -16,7 +16,6 @@ class CreateImage(generics.CreateAPIView):
     serializer_class = ImageSerializer
 
     def post(self, request, format=None):
-        print(request.data)
         serializer = ImageSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
