@@ -6,7 +6,8 @@ import {
     ADD_IMAGE,
     DELETE_IMAGE,
     GET_IMAGE_BY_ID,
-    GET_ERRORS
+    GET_ERRORS,
+    LOADING,
 } from './types.js';
 
 // GET ALL Images
@@ -28,7 +29,7 @@ export const getImages = () => (dispatch) => {
 
 // ADD  Image
 export const addImage = (data) => (dispatch) => {
-
+    dispatch(setLoading());
     axios.post('/api/image/create/',data,{
         headers: {
             'content-type': 'multipart/form-data'
@@ -56,3 +57,10 @@ export const getImageById = (image_id) => (dispatch) => {
             dispatch(returnErrors(err.response.data,err.response.status))
         });
 }
+
+
+export const setLoading = () => {
+    return {
+        type: LOADING
+    }
+};

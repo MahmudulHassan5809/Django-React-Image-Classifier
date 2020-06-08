@@ -5,10 +5,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addImage } from '../../actions/imageActions';
 
+import Sugar from 'sugar';
+
 import './Home.css'
 import Spinner from '../layout/Spinner'
 
-const Home = ({addImage}) => {
+const Home = ({addImage,image_obj,loading}) => {
     const [image,setImage] = useState({
         files: null,
         filename: '',
@@ -42,6 +44,7 @@ const Home = ({addImage}) => {
 
     const { files,isLoading,filename } = image;
 
+
     const sendImage = () => {
         let form_data = new FormData();
         form_data.append('picture', files, filename);
@@ -67,6 +70,8 @@ const Home = ({addImage}) => {
 
 
                     { isLoading && (<Spinner />)}
+
+
                 </div>
 
 
@@ -76,7 +81,24 @@ const Home = ({addImage}) => {
                     {filename}
                 </p>
 
-                {files ? <button onClick={sendImage} className="btn btn-dark">Upload</button> : ''}
+                <div className="text-center">
+                    {files ? <button onClick={sendImage} className="btn btn-dark">Upload</button> : ''}
+                    {loading && <Spinner />}
+                </div>
+
+                {
+                    image_obj && (
+                        <div className="card mx-auto" style={{width: '18rem'}}>
+                            <img src={image_obj.picture} className="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h4 className="card-title">{image_obj.classified}</h4>
+                                <p className="card-text">Uploaded At : {Sugar.Date.format(new Date(image_obj.uploaded), '%Y-%m-%d')}</p>
+                            </div>
+                        </div>
+                    )
+                }
+
+
 
             </div>
         </div>
@@ -87,5 +109,10 @@ Home.propTypes = {
     addImage : PropTypes.func.isRequired,
 };
 
+const mapStateToProps = state => ({
+    image_obj : state.image.image,
+    loading: state.image.isLoading,
+});
 
-export default connect(null,{addImage})(Home);
+
+export default connect(mapStateToProps,{addImage})(Home);

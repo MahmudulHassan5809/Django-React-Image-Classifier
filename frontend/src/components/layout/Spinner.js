@@ -6,7 +6,9 @@ import spinner from './spinner.gif';
 const Spinner = () => {
     return (
         <Fragment>
-            <img src={spinner} alt="Loading..." style={{ width : '200px' , margin: 'auto', display: 'block'}}/>
+            <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+            </div>
         </Fragment>
     );
 };

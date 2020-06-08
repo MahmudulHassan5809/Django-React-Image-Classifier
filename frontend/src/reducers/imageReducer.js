@@ -3,11 +3,13 @@ import {
     GET_IMAGES,
     DELETE_IMAGE,
     GET_IMAGE_BY_ID,
+    LOADING,
 } from '../actions/types.js';
 
 const initialState = {
     images: [],
-    image: {},
+    image: null,
+    isLoading: false,
 }
 
 export default function(state = initialState,action){
@@ -16,14 +18,21 @@ export default function(state = initialState,action){
             return{
                 ...state,
                 images: action.payload.images,
+                isLoading: false,
             }
             break;
         case GET_IMAGE_BY_ID:
             return{
                 ...state,
                 image: action.payload,
+                isLoading: false,
             }
             break;
+        case LOADING:
+            return {
+                ...state,
+                isLoading: true
+            };
         default:
             return state
             break;
