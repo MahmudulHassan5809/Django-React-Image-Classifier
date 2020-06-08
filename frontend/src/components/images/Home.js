@@ -65,8 +65,8 @@ const Home = ({addImage,image_obj,loading}) => {
                     <i className="far fa-image fa-4x mb-2 text-muted"></i>
                     {
                     isDragActive ?
-                      <p className="text-muted">Drop the files here ...</p> :
-                      <p className="text-muted">Drag 'n' drop some files here, or click to select files</p>
+                      <p className="text-muted">Drop the file here ...</p> :
+                      <p className="text-muted">Drag & drop some file here, or click to select files</p>
                     }
 
 
