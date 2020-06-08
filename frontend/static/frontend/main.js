@@ -114,11 +114,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***************************************!*\
   !*** ./frontend/src/actions/types.js ***!
   \***************************************/
-/*! exports provided: GET_IMAGES, GET_IMAGE_BY_ID, ADD_IMAGE, DELETE_IMAGE, LOADING, GET_ERRORS, CREATE_MESSAGE */
+/*! exports provided: GET_IMAGES, GET_IMAGE_BY_ID, LOADING, GET_ERRORS, CREATE_MESSAGE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_IMAGES\", function() { return GET_IMAGES; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_IMAGE_BY_ID\", function() { return GET_IMAGE_BY_ID; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ADD_IMAGE\", function() { return ADD_IMAGE; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_IMAGE\", function() { return DELETE_IMAGE; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LOADING\", function() { return LOADING; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_ERRORS\", function() { return GET_ERRORS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CREATE_MESSAGE\", function() { return CREATE_MESSAGE; });\nvar GET_IMAGES = 'GET_IMAGES';\nvar GET_IMAGE_BY_ID = 'GET_IMAGE_BY_ID';\nvar ADD_IMAGE = 'ADD_IMAGE';\nvar DELETE_IMAGE = 'DELETE_IMAGE';\nvar LOADING = 'LOADING';\nvar GET_ERRORS = 'GET_ERRORS';\nvar CREATE_MESSAGE = 'CREATE_MESSAGE';\n\n//# sourceURL=webpack:///./frontend/src/actions/types.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_IMAGES\", function() { return GET_IMAGES; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_IMAGE_BY_ID\", function() { return GET_IMAGE_BY_ID; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LOADING\", function() { return LOADING; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_ERRORS\", function() { return GET_ERRORS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CREATE_MESSAGE\", function() { return CREATE_MESSAGE; });\nvar GET_IMAGES = 'GET_IMAGES';\nvar GET_IMAGE_BY_ID = 'GET_IMAGE_BY_ID';\nvar LOADING = 'LOADING';\nvar GET_ERRORS = 'GET_ERRORS';\nvar CREATE_MESSAGE = 'CREATE_MESSAGE';\n\n//# sourceURL=webpack:///./frontend/src/actions/types.js?");
 
 /***/ }),
 

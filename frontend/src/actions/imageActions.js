@@ -3,8 +3,6 @@ import { createMessage,returnErrors } from './messageActions';
 
 import {
     GET_IMAGES,
-    ADD_IMAGE,
-    DELETE_IMAGE,
     GET_IMAGE_BY_ID,
     GET_ERRORS,
     LOADING,

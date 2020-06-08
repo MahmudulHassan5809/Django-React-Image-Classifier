@@ -11,6 +11,7 @@ import './Home.css'
 import Spinner from '../layout/Spinner'
 
 const Home = ({addImage,image_obj,loading}) => {
+
     const [image,setImage] = useState({
         files: null,
         filename: '',
