@@ -1,7 +1,7 @@
 absl-py==0.7.1
 asgiref==3.2.7
 astor==0.8.0
-Django==3.0.7
+Django==3.1.12
 django-cors-headers==3.3.0
 djangorestframework==3.11.0
 gast==0.2.2
